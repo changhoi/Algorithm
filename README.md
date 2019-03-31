@@ -6,8 +6,11 @@
 
 ## [Basic](./Basic)
 
+## [Dynamic-Programming](./Dynamic-Programming)
+
+## [Mathematics](./Mathematics)
+
 ## [Stack-Queue-Deque](./Stack-Queue-Deque)
 
 ## [String](./String)
 
-## [Dynamic-Programming](./Dynamic-Programming)
