@@ -2,8 +2,6 @@
 
 ## TODO
 - [B11052](https://www.acmicpc.net/problem/11052): 붕어빵 판매하기
-- [B2579](https://www.acmicpc.net/problem/2579): 계단 오르기
-- [B1699](https://www.acmicpc.net/problem/1699): 제곱수의 합
 - [B2133](https://www.acmicpc.net/problem/2133): 타일 채우기
 - [B9461](https://www.acmicpc.net/problem/9461): 파도반 수열
 - [B2225](https://www.acmicpc.net/problem/2225): 합분해
@@ -20,3 +18,5 @@
 - [B11722](https://www.acmicpc.net/problem/11722): 가장 긴 감소 부분 수열
 - [B11054](https://www.acmicpc.net/problem/11054): 가장 긴 부분 바이토닉 수열
 - [B9465](https://www.acmicpc.net/problem/9465): 스티커
+- [B2579](https://www.acmicpc.net/problem/2579): 계단 오르기
+- [B1699](https://www.acmicpc.net/problem/1699): 제곱수의 합
