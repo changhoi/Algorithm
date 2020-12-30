@@ -14,7 +14,7 @@ class Node {
     }
 }
 
-class Solution {
+class Solution02 {
     boolean[][] edges;
 
     void dfs(Node n) {
