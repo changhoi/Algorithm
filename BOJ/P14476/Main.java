@@ -1,0 +1,70 @@
+package DAY04.P14476;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Main {
+    // 부적합 사용
+    // gcdLtoR
+    // gcdRtoL
+    static int N;
+    static int[] nums;
+    static int[] gcdLtoR;
+    static int[] gcdRtoL;
+
+    public static void main(String[] args) throws Exception{
+        System.setIn(new FileInputStream("src/DAY04/P14476/input.txt"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        N = Integer.parseInt(br.readLine());
+
+        nums = new int[N];
+        gcdRtoL = new int[N];
+        gcdLtoR = new int[N];
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < N; i++) {
+            nums[i] = Integer.parseInt(st.nextToken());
+        }
+        System.out.println(Arrays.toString(nums));
+
+        int max = 0;
+        int maxIndex = 0;
+        for (int i = 0; i < N; i++) {
+            int gcd = 0;
+            if (i == 0) {
+                gcd = gcdRtoL[1];
+            } else if (i == N - 1 ) {
+                gcd = gcdLtoR[N - 2];
+            } else {
+                gcd = gcd(gcdLtoR[i - 1], gcdRtoL[i + 1]);
+            }
+
+            if (nums[i] % gcd != 0 && gcd > max) {
+                max = gcd;
+                maxIndex = i;
+            }
+        }
+
+        if (max == 0) {
+            System.out.println(-1);
+        } else {
+            System.out.println(max + " " + nums[maxIndex]);
+        }
+    }
+
+    static int gcd(int a, int b) {
+        while (b!=0) {
+            int r = a % b;
+            a = b;
+            b = r;
+        }
+
+        return a;
+    }
+}
+
